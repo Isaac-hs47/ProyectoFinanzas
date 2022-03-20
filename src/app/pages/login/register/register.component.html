@@ -1,0 +1,25 @@
+<div class="register-container">
+    <div class="">
+        <h1>Registro</h1>
+    </div>
+    <form [formGroup]="registerForm" class="m-3">
+        <mat-form-field class="form-field" appearance="fill">
+            <mat-label>Nombre completo</mat-label>
+            <input matInput type="text" formControlName="name">
+          </mat-form-field>
+        <mat-form-field class="form-field" appearance="fill">
+            <mat-label>Usuario</mat-label>
+            <input matInput type="text" formControlName="username">
+          </mat-form-field>
+          <mat-form-field class="form-field" appearance="fill">
+            <mat-label>Contraseña</mat-label>
+            <input matInput type="password" formControlName="password" (change)="AddRepeatPasswordValidation()">
+          </mat-form-field>
+          <mat-form-field class="form-field" appearance="fill">
+            <mat-label>Repetir Contraseña</mat-label>
+            <input matInput type="password" formControlName="repeatPassword">
+          </mat-form-field>
+          <button mat-raised-button type="button" color="primary" class="form-field" (click)="RegisterUser()" [disabled]="DisableRegisterButton()">Registrarse</button>
+    </form>
+    <p class="m-2">Ya tienes cuenta? <a mat-button color="primary" (click)="GoToLogin()">Inicia sesión</a></p>
+</div>

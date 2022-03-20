@@ -1,0 +1,43 @@
+.form-field{
+    width: 100%;
+}
+
+.p-1{
+    padding: 5px;
+}
+
+.p-2{
+    padding: 7px;
+}
+
+.p-3{
+    padding: 10px;
+}
+
+.p-4{
+    padding: 12px;
+}
+
+.p-5{
+    padding: 15px;
+}
+
+.m-1{
+    margin: 5px;
+}
+
+.m-2{
+    margin: 7px;
+}
+
+.m-3{
+    margin: 10px;
+}
+
+.m-4{
+    margin: 12px;
+}
+
+.m-5{
+    margin: 15px;
+}
