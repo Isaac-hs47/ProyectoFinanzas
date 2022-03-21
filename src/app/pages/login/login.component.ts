@@ -40,11 +40,13 @@ export class LoginComponent implements OnInit {
 
     let user: User | undefined = this.users.find(u => u.Username === username);
    
-    if(!user || user.Username !== username && user.Password !== password)
+    if(!user || user.Username !== username || user.Password !== password)
     {
       this.alertService.Alert("error", "Usuario y/o contraseña incorrectos");
       return;
     }
+
+    this.localStorageSevice.SetStorageVariable(StorageVariables.SESSION, user);
 
     this.router.navigateByUrl("/home");
   }

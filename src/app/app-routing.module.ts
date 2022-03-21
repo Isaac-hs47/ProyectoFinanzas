@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { LearningComponent } from './pages/learning/learning.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/login/register/register.component';
 
@@ -18,9 +19,13 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'learn',
+    component: LearningComponent
+  },
+  {
     path: '**',
     pathMatch: 'full',
-    redirectTo: '/home'
+    redirectTo: '/login'
   }
 ];
 

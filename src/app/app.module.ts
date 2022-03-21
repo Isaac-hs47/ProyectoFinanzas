@@ -8,20 +8,23 @@ import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { RegisterComponent } from './pages/login/register/register.component';
-
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { LearningComponent } from './pages/learning/learning.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    LearningComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
+    MatSidenavModule
     
   ],
   providers: [],

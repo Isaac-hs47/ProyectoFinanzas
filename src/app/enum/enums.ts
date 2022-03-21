@@ -14,5 +14,5 @@ export enum BadgesCodes{
 
 export enum StorageVariables{
     USERS = "Users",
-
+    SESSION = "Session"
 }

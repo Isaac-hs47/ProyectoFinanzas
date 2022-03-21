@@ -1,6 +1,8 @@
-<div class="login-container">
-    <div class="login-logo-container">
-        <div class="login-logo">
+<div class="login-container align-center">
+
+
+        <div class="login-logo-container">
+            <div class="login-logo">
             <img src="../../../assets/img/logo_angular.webp" alt="App logo" class="logo">
         </div>
         <div class="login-logo-name">
@@ -11,12 +13,13 @@
         <mat-form-field class="form-field" appearance="fill" >
             <mat-label>Usuario</mat-label>
             <input matInput type="text" formControlName="username">
-          </mat-form-field>
-          <mat-form-field class="form-field" appearance="fill" >
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="fill" >
             <mat-label>Contraseña</mat-label>
             <input matInput type="password" formControlName="password">
-          </mat-form-field>
-          <button mat-raised-button type="button" color="primary" class="form-field" (click)="OnLogin()">Iniciar sesión</button>
+        </mat-form-field>
+        <button mat-raised-button type="button" color="primary" class="form-field" (click)="OnLogin()">Iniciar sesión</button>
     </form>
     <p class="m-2">No tienes cuenta? <a mat-button color="primary" (click)="GoRegisterPage()">Registrate</a></p>
+
 </div>

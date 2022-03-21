@@ -1,4 +1,5 @@
 import { BadgesCodes, BadgeTypes } from "../enum/enums";
+import { MenuOption } from "./menu";
 import { Badge } from "./user";
 
 export class AppConstants{
@@ -31,4 +32,32 @@ export const BADGES: Badge[] = [
         Description: "Has alcanzado el máximo nivel",
         Type: BadgeTypes.Bronce
     }
-]
+];
+
+export const MENU: MenuOption[] = [
+    {
+        Icon: "home",
+        Name: "Inicio",
+        redirectTo:"home"
+    },
+    {
+        Icon: "school",
+        Name: "Aprendizaje",
+        redirectTo: "learn"
+    },
+    {
+        Icon: "checklist",
+        Name: "Pruebas",
+        redirectTo: "test"
+    },
+    {
+        Icon: "face",
+        Name: "Perfil",
+        redirectTo: "profile"
+    },
+    {
+        Icon: "logout",
+        Name: "Cerrar sesión",
+        redirectTo: "login"
+    }
+];
