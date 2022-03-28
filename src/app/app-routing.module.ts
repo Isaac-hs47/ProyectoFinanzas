@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LearningComponent } from './pages/learning/learning.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/login/register/register.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -23,14 +24,18 @@ const routes: Routes = [
     component: LearningComponent
   },
   {
+    path: 'profile',
+    component: ProfileComponent
+  },
+  {
     path: '**',
     pathMatch: 'full',
-    redirectTo: '/login'
+    redirectTo: '/home'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { StorageVariables } from 'src/app/enum/enums';
-import { User } from 'src/app/interfaces/user';
+import { BadgesCodes, BadgeTypes, StorageVariables } from 'src/app/enum/enums';
+import { BADGES } from 'src/app/interfaces/constants';
+import { Badge, User } from 'src/app/interfaces/user';
+import { AlertService } from 'src/app/services/alert.service';
 import { LocalstorageService } from 'src/app/services/localstorage.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-home',
@@ -11,10 +14,34 @@ import { LocalstorageService } from 'src/app/services/localstorage.service';
 export class HomeComponent implements OnInit {
 
   currentUser!: User;
-  constructor(private localStorageService: LocalstorageService) { }
+  constructor(private localStorageService: LocalstorageService,
+              private alertService: AlertService,
+              private userService: UserService) { }
 
   ngOnInit(): void {
     this.currentUser= this.localStorageService.GetStorageVariable<User>(StorageVariables.SESSION, {} as User); 
+
+    this.GiveBeginnerBadge();
+  }
+
+  GiveBeginnerBadge(): void{
+    if(!this.currentUser.Badges.some(b => b.Code === BadgesCodes.NEW_BEGINNING))
+    {
+      let badge: Badge | undefined = BADGES.find(b => b.Code === BadgesCodes.NEW_BEGINNING);
+
+      if(badge)
+      {
+        this.currentUser.Badges.push(badge);
+
+        this.userService.UpdateUser(this.currentUser);
+
+        this.alertService.BadgeAlert(BadgeTypes[0].toLowerCase(), badge.Description);
+      }
+      else
+      {
+        console.error("No se encontro la insignia de nuevo comienzo");
+      }
+    }
   }
 
 }

@@ -10,27 +10,27 @@ export const BADGES: Badge[] = [
     {
         Code: BadgesCodes.NEW_BEGINNING,
         Description: "Un nuevo comienzo",
-        Type: BadgeTypes.Bronce
+        Type: BadgeTypes.Bronze
     },
     {
         Code: BadgesCodes.FIRST_HIT,
         Description: "Primer acierto",
-        Type: BadgeTypes.Bronce
+        Type: BadgeTypes.Bronze
     },
     {
         Code: BadgesCodes.BEGINNER,
         Description: "Has alcanzado el primer nivel",
-        Type: BadgeTypes.Bronce
+        Type: BadgeTypes.Bronze
     },
     {
         Code: BadgesCodes.INTERMEDIATE,
         Description: "Has alcanzado el nivel 5",
-        Type: BadgeTypes.Bronce
+        Type: BadgeTypes.Silver
     },
     {
         Code: BadgesCodes.EXPERT,
         Description: "Has alcanzado el máximo nivel",
-        Type: BadgeTypes.Bronce
+        Type: BadgeTypes.Gold
     }
 ];
 

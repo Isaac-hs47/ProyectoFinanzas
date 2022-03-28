@@ -10,6 +10,7 @@ import { SharedModule } from './shared/shared.module';
 import { RegisterComponent } from './pages/login/register/register.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { LearningComponent } from './pages/learning/learning.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LearningComponent } from './pages/learning/learning.component';
     LoginComponent,
     HomeComponent,
     RegisterComponent,
-    LearningComponent
+    LearningComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

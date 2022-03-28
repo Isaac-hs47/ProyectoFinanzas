@@ -20,4 +20,17 @@ export class AlertService {
     });
   }
 
+  BadgeAlert(_medalType: string, _badgeDescription: string): void{
+    Swal.fire({
+      title: 'Felicitaciones!!!',
+      text: _badgeDescription,
+      imageUrl: `../../assets/img/${_medalType}-medal.png`,
+      imageWidth: 200,
+      imageHeight: 200,
+      imageAlt: 'Medal',
+      confirmButtonText: 'Continuar',
+      timer: 2500
+    });
+  }
+
 }
