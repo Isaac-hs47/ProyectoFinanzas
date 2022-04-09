@@ -33,4 +33,18 @@ export class AlertService {
     });
   }
 
+  NewLavelObteined(_text: string): void
+  {
+    Swal.fire({
+      title: 'Felicitaciones!!!',
+      text: _text,
+      imageUrl: `../../assets/img/fireworks.png`,
+      imageWidth: 200,
+      imageHeight: 200,
+      imageAlt: 'Medal',
+      confirmButtonText: 'Continuar',
+      timer: 2500
+    });
+  }
+
 }

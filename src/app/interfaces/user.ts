@@ -14,10 +14,16 @@ export interface Level{
     CurrentLevel: number;
     CurrentXP: number;
     NeededXP: number;
+    AllObtainedXP: number;
 }
 
 export interface Badge{
     Code: number;
     Description: string;
     Type: BadgeTypes;
+}
+
+export interface ExperienceLevel{
+  NeededXP: number;
+  Level: number;
 }

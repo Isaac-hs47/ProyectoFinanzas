@@ -31,7 +31,7 @@ export class RegisterComponent implements OnInit {
   RegisterUser(): void{
 
     let users: User[] = this.localStorage.GetStorageVariable<User[]>(StorageVariables.USERS, []);
-    
+
     let existUser: boolean = users.map(u => u.Id).length > 0;
 
     let IDs: number[] = existUser ?  users.map(u => u.Id) : [-1];
@@ -47,7 +47,8 @@ export class RegisterComponent implements OnInit {
       Level: {
         CurrentLevel: 0,
         CurrentXP: 0,
-        NeededXP: 200
+        NeededXP: 200,
+        AllObtainedXP: 0
       },
       ProfilePicturePath: "defaultProfilePicture.png"
     }

@@ -19,12 +19,13 @@ export class HomeComponent implements OnInit {
               private userService: UserService) { }
 
   ngOnInit(): void {
-    this.currentUser= this.localStorageService.GetStorageVariable<User>(StorageVariables.SESSION, {} as User); 
+    this.currentUser= this.localStorageService.GetStorageVariable<User>(StorageVariables.SESSION, {} as User);
 
     this.GiveBeginnerBadge();
   }
 
   GiveBeginnerBadge(): void{
+
     if(!this.currentUser.Badges.some(b => b.Code === BadgesCodes.NEW_BEGINNING))
     {
       let badge: Badge | undefined = BADGES.find(b => b.Code === BadgesCodes.NEW_BEGINNING);

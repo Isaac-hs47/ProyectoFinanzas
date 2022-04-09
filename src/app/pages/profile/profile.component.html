@@ -1,12 +1,13 @@
 <div class="profile-container">
     <div class="header-container">
         <div class="picture-container">
-            <img [src]="profilePicturePath" alt="Profile picture" class="profile-picture">
+            <img [src]="profilePicturePath" alt="Profile picture" (click)="file.click()" class="profile-picture">
+            <input type="file" #file (change)="UploadPictureImg($event)" class="hide">
         </div>
         <div class="user-info-container">
             <span class="fs-3 fw-5 p-2">{{ user.FullName }}</span>
             <span class="fs-3 fw-5 p-2">{{ user.Username }}</span>
-            <span class="fs-3 fw-5 p-2">XP: {{ user.Level.CurrentXP }}</span>
+            <span class="fs-3 fw-5 p-2">XP: {{ user.Level.AllObtainedXP }}</span>
             <span class="fs-3 fw-5 p-2">Nivel: {{ user.Level.CurrentLevel }}</span>
             <span class="fs-3 fw-5 p-2">Insignias: {{ user.Badges.length }}</span>
         </div>
@@ -34,7 +35,7 @@
                 <div class="badge" *ngFor="let badge of user.Badges">
                     <div class="badge-img-container">
                         <img [src]="GetBadgeImage(badge)" alt="" class="badge-image">
-                    </div> 
+                    </div>
                     <div class="badge-description">
                         <span>{{ badge.Description }}</span>
                     </div>

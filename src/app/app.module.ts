@@ -11,6 +11,9 @@ import { RegisterComponent } from './pages/login/register/register.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { LearningComponent } from './pages/learning/learning.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ExamsComponent } from './pages/exams/exams.component';
+import { ExamModalComponent } from './pages/exams/exam-modal/exam-modal.component';
 
 @NgModule({
   declarations: [
@@ -19,15 +22,17 @@ import { ProfileComponent } from './pages/profile/profile.component';
     HomeComponent,
     RegisterComponent,
     LearningComponent,
-    ProfileComponent
+    ProfileComponent,
+    ExamsComponent,
+    ExamModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    MatSidenavModule
-    
+    MatSidenavModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
