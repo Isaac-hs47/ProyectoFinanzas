@@ -25,13 +25,18 @@ export const BADGES: Badge[] = [
     },
     {
         Code: BadgesCodes.INTERMEDIATE,
-        Description: "Has alcanzado el nivel 5",
+        Description: "Mitad del camino completo",
         Type: BadgeTypes.Silver
     },
     {
         Code: BadgesCodes.EXPERT,
         Description: "Has alcanzado el máximo nivel",
         Type: BadgeTypes.Gold
+    },
+    {
+      Code: BadgesCodes.FIRST_TEST,
+      Description: "Has completado tu primer examen",
+      Type: BadgeTypes.Bronze
     }
 ];
 
@@ -104,6 +109,10 @@ export const Levels: ExperienceLevel[] =
   {
     Level: 10,
     NeededXP: 7545
+  },
+  {
+    Level: 11,
+    NeededXP: 10000
   }
 ]
 

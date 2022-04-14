@@ -6,10 +6,12 @@
     <mat-card-subtitle>Experiencia por completarlo: {{GetExamTotalExperience(exam.Id)}}</mat-card-subtitle>
   </mat-card-header>
   <img mat-card-image src="../../../assets/img/libros.webp" alt="Photo of a Shiba Inu">
-  <mat-card-content>
-    Este examen tiene {{exam.Questions.length}} preguntas
+  <mat-card-content class="flex-column">
+    <span  *ngIf="!ExamIsComplete(exam.Id)">Este examen tiene {{exam.Questions.length}} preguntas</span>
+    <span  *ngIf="ExamIsComplete(exam.Id)">Respondiste bien {{ GetGoodAnsweredQuesitons(exam.Id) }}  de {{exam.Questions.length}} preguntas</span>
+    <span  *ngIf="ExamIsComplete(exam.Id)">Podras retomarlo el {{ GetExamRetakeDate(exam.Id)}}</span>
   </mat-card-content>
-  <mat-card-actions>
+  <mat-card-actions *ngIf="!ExamIsComplete(exam.Id)">
     <button mat-button (click)="OpenExamModal(exam.Id)">Tomar examer</button>
   </mat-card-actions>
 </mat-card>

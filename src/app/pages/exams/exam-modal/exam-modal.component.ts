@@ -3,9 +3,10 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatTab, MatTabGroup } from '@angular/material/tabs';
 import { BadgesCodes, BadgeTypes, StorageVariables } from 'src/app/enum/enums';
 import { BADGES, Levels } from 'src/app/interfaces/constants';
-import { Answer, Exam } from 'src/app/interfaces/exam';
+import { Answer, Exam, Question } from 'src/app/interfaces/exam';
 import { Badge, ExperienceLevel, User } from 'src/app/interfaces/user';
 import { AlertService } from 'src/app/services/alert.service';
+import { CommonService } from 'src/app/services/common.service';
 import { LocalstorageService } from 'src/app/services/localstorage.service';
 import { UserService } from 'src/app/services/user.service';
 
@@ -21,11 +22,13 @@ export class ExamModalComponent implements OnInit {
   enableAllTabs!:boolean;
   showResults!: boolean;
   levels!: ExperienceLevel[];
+  midLevel!: number;
   constructor(public dialogRef: MatDialogRef<ExamModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Exam,
     private userService: UserService,
     private localStorage: LocalstorageService,
-    private alertService: AlertService) { }
+    private alertService: AlertService,
+    private commonService: CommonService) { }
 
   ngOnInit(): void {
     this.currentUser= this.localStorage.GetStorageVariable<User>(StorageVariables.SESSION, {} as User);
@@ -33,53 +36,67 @@ export class ExamModalComponent implements OnInit {
     this.enableCloseButton = false;
     this.showResults = false;
     this.levels = [...Levels];
+    this.midLevel = this.commonService.GetMidLevel();
   }
 
   toString(num: number): string{
     return num.toString();
   }
 
-  OnAnswerClick(answer: Answer, tabs: MatTabGroup): void
+  OnAnswerClick(answer: Answer, question: Question, tabs: MatTabGroup): void
   {
     if(this.enableAllTabs) return;
 
     if(answer.IsCorrect)
     {
+      this.userService.GiveBadge(this.currentUser, BadgesCodes.FIRST_HIT);
+
+      question.GoodResponse = true;
+
       this.currentUser.Level.CurrentXP += answer.XP;
+
       this.currentUser.Level.AllObtainedXP += answer.XP;
 
       if(this.currentUser.Level.CurrentXP >= this.currentUser.Level.NeededXP &&
         this.currentUser.Level.CurrentLevel <= this.levels.length)
       {
         this.currentUser.Level.CurrentLevel++;
+
         this.currentUser.Level.CurrentXP = (this.currentUser.Level.CurrentXP - this.currentUser.Level.NeededXP);
+
         if(this.currentUser.Level.CurrentLevel === this.levels.length)
         {
-          let badge: Badge | undefined = BADGES.find(b => b.Code === BadgesCodes.EXPERT);
-
-          if(badge)
-          {
-            this.currentUser.Badges.push(badge);
-
-            this.alertService.BadgeAlert(BadgeTypes[0].toLowerCase(), badge.Description);
-          }
+          this.userService.GiveBadge(this.currentUser, BadgesCodes.EXPERT);
         }
         else
         {
           this.alertService.NewLavelObteined(`Felicitaciones!!! Has subido de nivel`);
+
           this.currentUser.Level.NeededXP = this.levels.find(lvl => lvl.Level === this.currentUser.Level.CurrentLevel+1)?.NeededXP ?? 0;
         }
+
+        if(this.currentUser.Level.CurrentLevel === this.midLevel) this.userService.GiveBadge(this.currentUser, BadgesCodes.INTERMEDIATE);
       }
+
       this.userService.UpdateUser(this.currentUser);
     }
     this.currentQuestionIndex++;
+
     if(this.currentQuestionIndex === tabs._tabs.length)
     {
       this.enableCloseButton = true;
+
       this.enableAllTabs = true;
+
       this.showResults = true;
+
+      this.userService.UpdateCompletedTest(this.currentUser, this.data);
+
+      this.userService.GiveBadge(this.currentUser, BadgesCodes.FIRST_TEST);
     }
+
     tabs.selectedIndex = this.currentQuestionIndex;
+
     setTimeout(()=>answer.IsSelected = true,0);
   }
 

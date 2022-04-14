@@ -5,7 +5,7 @@
       <div class="modal-question"><span>{{question.Description}}</span></div>
       <div class="modal-answers-container">
         <div *ngFor="let ans of question.Answers;" class="answer"
-        (click)="OnAnswerClick(ans, tabs)" [class]="ShowOptionResult(ans)">
+        (click)="OnAnswerClick(ans,question, tabs)" [class]="ShowOptionResult(ans)">
           <span>{{ans.Description}}</span>
         </div>
       </div>

@@ -8,6 +8,7 @@ export interface User{
     Level: Level;
     Badges: Badge[];
     ProfilePicturePath: string;
+    CompletedTest: TestComplete[];
 }
 
 export interface Level{
@@ -26,4 +27,11 @@ export interface Badge{
 export interface ExperienceLevel{
   NeededXP: number;
   Level: number;
+}
+
+export interface TestComplete{
+  testID: number,
+  QuestionsAnsweredIDs: number[],
+  QuestionsGoodResponseID: number[];
+  RetakeDate: Date;
 }

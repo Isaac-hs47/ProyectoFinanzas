@@ -9,7 +9,8 @@ export enum BadgesCodes{
     FIRST_HIT,
     BEGINNER,
     INTERMEDIATE,
-    EXPERT
+    EXPERT,
+    FIRST_TEST
 }
 
 export enum StorageVariables{
