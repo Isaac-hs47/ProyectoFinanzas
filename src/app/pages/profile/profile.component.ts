@@ -16,7 +16,7 @@ export class ProfileComponent implements OnInit {
 
   user!: User;
   profilePicturePath!: string;
-  imagesPath: string = "../../../assets/picture-photos/";
+  imagesPath: string = "./assets/picture-photos/";
 
   constructor(private localStorage: LocalstorageService,
               private http: HttpClient,
@@ -33,7 +33,7 @@ export class ProfileComponent implements OnInit {
   }
 
   GetBadgeImage(_badge: Badge): string{
-    return `../../../assets/img/${BadgeTypes[_badge.Type].toLowerCase()}-medal.png`;
+    return `./assets/img/${BadgeTypes[_badge.Type].toLowerCase()}-medal.png`;
   }
 
   UploadPictureImg(_file: any): void{
@@ -67,7 +67,7 @@ export class ProfileComponent implements OnInit {
       next: (next) => {
         let img = next;
         this.profilePicturePath = `${this.imagesPath}${img}`;
-        this.user.ProfilePicturePath = this.profilePicturePath;
+        this.user.ProfilePicturePath = next;
         this.userService.UpdateUser(this.user);
       }
     })

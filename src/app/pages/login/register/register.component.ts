@@ -50,7 +50,7 @@ export class RegisterComponent implements OnInit {
         NeededXP: 200,
         AllObtainedXP: 0
       },
-      ProfilePicturePath: "defaultProfilePicture.png",
+      ProfilePicturePath: "default.png",
       CompletedTest: []
     }
 

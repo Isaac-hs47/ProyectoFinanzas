@@ -24,7 +24,7 @@ export class AlertService {
     Swal.fire({
       title: 'Felicitaciones!!!',
       text: _badgeDescription,
-      imageUrl: `../../assets/img/${_medalType}-medal.png`,
+      imageUrl: `./assets/img/${_medalType}-medal.png`,
       imageWidth: 200,
       imageHeight: 200,
       imageAlt: 'Medal',
@@ -38,7 +38,7 @@ export class AlertService {
     Swal.fire({
       title: 'Felicitaciones!!!',
       text: _text,
-      imageUrl: `../../assets/img/fireworks.png`,
+      imageUrl: `./assets/img/fireworks.png`,
       imageWidth: 200,
       imageHeight: 200,
       imageAlt: 'Medal',
@@ -51,7 +51,7 @@ export class AlertService {
   {
     Swal.fire({
       text: _text,
-      imageUrl: `../../assets/img/bad_response.png`,
+      imageUrl: `./assets/img/bad_response.png`,
       imageWidth: 200,
       imageHeight: 200,
       imageAlt: 'Risa',
