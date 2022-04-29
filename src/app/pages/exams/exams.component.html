@@ -1,11 +1,12 @@
-<div class="exams-container">
 
-  <mat-card *ngFor="let exam of exams"  class="exam">
-    <mat-card-header>
+  <div class="exams-container">
+
+    <mat-card *ngFor="let exam of exams"  class="exam">
+      <mat-card-header>
       <mat-card-title>{{exam.Name}}</mat-card-title>
     <mat-card-subtitle>Experiencia por completarlo: {{GetExamTotalExperience(exam.Id)}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="../../../assets/img/libros.webp" alt="Photo of a Shiba Inu">
+  <img mat-card-image src="../../../assets/img/logo_exams.jpeg" alt="Photo of a Shiba Inu">
   <mat-card-content class="flex-column">
     <span  *ngIf="!ExamIsComplete(exam.Id)">Este examen tiene {{exam.Questions.length}} preguntas</span>
     <span  *ngIf="ExamIsComplete(exam.Id)">Respondiste bien {{ GetGoodAnsweredQuesitons(exam.Id) }}  de {{exam.Questions.length}} preguntas</span>
@@ -15,4 +16,7 @@
     <button mat-button (click)="OpenExamModal(exam.Id)">Tomar examer</button>
   </mat-card-actions>
 </mat-card>
+</div>
+<div class="page-bg">
+
 </div>

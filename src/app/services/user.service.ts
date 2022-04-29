@@ -48,7 +48,6 @@ export class UserService {
   UpdateCompletedTest(_user: User,_exam: Exam): void{
 
     let index: number = _user.CompletedTest.findIndex(ex => ex.testID === _exam.Id);
-    debugger
 
     if(index !== -1)
     {

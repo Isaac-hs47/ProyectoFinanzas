@@ -1,7 +1,7 @@
 <mat-drawer-container class="main-container" autosize>
     <mat-drawer #drawer class="sidenav" mode="side">
         <div class="p-2 align-center">
-            <h3 class="text-center w-100"><span>Tus Finanzas</span></h3>
+            <h3 class="text-center w-100"><span>Administra tus finanzas</span></h3>
         </div>
         <mat-selection-list #options [multiple]="false">
             <mat-list-option *ngFor="let option of menuOptions" class="menu-option" (click)="OnClickMenuOption(option, drawer)">
@@ -22,8 +22,8 @@
         </button>
     </div>
     <div class="main-content">
-        
+
         <router-outlet></router-outlet>
-      
+
     </div>
 </mat-drawer-container>

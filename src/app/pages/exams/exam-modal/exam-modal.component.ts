@@ -80,6 +80,12 @@ export class ExamModalComponent implements OnInit {
 
       this.userService.UpdateUser(this.currentUser);
     }
+    else
+    {
+      this.alertService.BadResponse("JAJAJA");
+    }
+
+
     this.currentQuestionIndex++;
 
     if(this.currentQuestionIndex === tabs._tabs.length)

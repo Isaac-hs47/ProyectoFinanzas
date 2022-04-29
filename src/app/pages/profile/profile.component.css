@@ -2,6 +2,7 @@
     height: 100%;
     margin: 0 200px;
     background-color: rgba(0,0,0,.05);
+    background-color: transparent;
 }
 
 .header-container{
@@ -92,6 +93,7 @@
 .body-container{
     width: 100%;
     height: calc(100% - 290px);
+    background-color: white;
     /* background-color: cadetblue; */
 }
 
@@ -144,4 +146,17 @@
 
 .hide{
   display: none;
+}
+
+
+.page-bg{
+  background-image: url("../../../assets/img/finanzas_fondo2.jpg");
+  background-repeat: repeat;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1000;
+  width: 100vw;
+  height: 100vh;
 }

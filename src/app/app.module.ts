@@ -14,6 +14,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ExamsComponent } from './pages/exams/exams.component';
 import { ExamModalComponent } from './pages/exams/exam-modal/exam-modal.component';
+import { PicturesComponent } from './pages/profile/pictures/pictures.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ExamModalComponent } from './pages/exams/exam-modal/exam-modal.componen
     LearningComponent,
     ProfileComponent,
     ExamsComponent,
-    ExamModalComponent
+    ExamModalComponent,
+    PicturesComponent
   ],
   imports: [
     BrowserModule,

@@ -47,4 +47,17 @@ export class AlertService {
     });
   }
 
+  BadResponse(_text: string): void
+  {
+    Swal.fire({
+      text: _text,
+      imageUrl: `../../assets/img/bad_response.png`,
+      imageWidth: 200,
+      imageHeight: 200,
+      imageAlt: 'Risa',
+      showConfirmButton: false,
+      timer: 750
+    });
+  }
+
 }

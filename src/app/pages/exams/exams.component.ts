@@ -2,11 +2,10 @@ import { formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { StorageVariables } from 'src/app/enum/enums';
-import { Examenes } from 'src/app/interfaces/constants';
 import { Exam } from 'src/app/interfaces/exam';
 import { TestComplete, User } from 'src/app/interfaces/user';
+import { CommonService } from 'src/app/services/common.service';
 import { LocalstorageService } from 'src/app/services/localstorage.service';
-import { UserService } from 'src/app/services/user.service';
 import { ExamModalComponent } from './exam-modal/exam-modal.component';
 
 @Component({
@@ -18,11 +17,15 @@ export class ExamsComponent implements OnInit {
   exams!: Exam[];
   currUser!: User;
   userCompletedExams!: TestComplete[];
-  constructor(private dialog: MatDialog, private localStorage: LocalstorageService, private userService: UserService) { }
+  constructor(private dialog: MatDialog, private localStorage: LocalstorageService, private commonService: CommonService) { }
 
   ngOnInit(): void {
 
-    this.exams = [...Examenes];
+    this.commonService.GetJson<Exam>("exams").subscribe({
+      next: (next) => {
+        this.exams = [...next];
+      }
+    });
     this.currUser = this.localStorage.GetStorageVariable<User>(StorageVariables.SESSION, {} as User);
     this.userCompletedExams = [...this.currUser.CompletedTest];
 

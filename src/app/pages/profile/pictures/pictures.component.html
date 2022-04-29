@@ -1,0 +1,11 @@
+
+<div class="images-container">
+  <div class="images-header p-3">
+      <span class="fs-4 fw-5">Imagenes para foto de perfil</span>
+  </div>
+  <div class="images p-3">
+      <div class="ml-4 mt-4 p-3" *ngFor="let img of images">
+        <img width="140" height="140" class="img" src="../../../../assets/picture-photos/{{img.name}}" alt="Imagen" [mat-dialog-close]="img.name">
+      </div>
+  </div>
+</div>
