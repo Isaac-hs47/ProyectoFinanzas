@@ -1,0 +1,591 @@
+[
+  {
+    "Id": 1,
+    "Name": "EXAMEN BASICO",
+    "IsComplete": false,
+    "Questions": [
+      {
+        "Id": 1,
+        "GoodResponse": false,
+        "Description": "¿Sobre qué trata la educación financiera?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Estudia cómo se fabrican los billetes.",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Se relaciona con el manejo de dinero y nuestras pertenencias.",
+            "IsCorrect": true,
+            "XP": 60
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Se refiere a una educación parecida a la matemática.",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      },
+      {
+        "Id": 2,
+        "GoodResponse": false,
+        "Description": "La manera de obtener nuestra comida, ropa, celulares, juguetes o servicios de luz y agua se realiza mediante:",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "El comportarse de manera desesperada para que mis padres cedan.",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Pagos de los que solo se encargarán nuestros padres. ",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Pagos que salen de nuestro bolsillo cuando disponemos de dinero suficiente.",
+            "IsCorrect": true,
+            "XP": 30
+          }
+        ]
+      },
+      {
+        "Id": 3,
+        "GoodResponse": false,
+        "Description": "¿Cuáles son algunas habilidades básicas que se aprenden en la educación financiera?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Métodos que mejoran el manejo de nuestros recursos.",
+            "IsCorrect": true,
+            "XP": 47
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Soluciones absolutas que aseguran nuestras finanzas.",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Métodos para comprar todo lo que pretendamos tener.",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      },
+      {
+        "Id": 4,
+        "GoodResponse": false,
+        "Description": "¿Otra manera de referirse a esta educación es?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Finanzas personales.",
+            "IsCorrect": true,
+            "XP": 25
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Educación monetaria.",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Estudio del dinero.",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      },
+      {
+        "Id": 5,
+        "GoodResponse": false,
+        "Description": "¿Por qué se deben evitar los gastos hormiga?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Para convertirse en una persona sabia.",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Para dejar de comer golosinas.",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Para evitar el exceso de gastos innecesarios.",
+            "IsCorrect": true,
+            "XP": 205
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "Name": "EXAMEN INTERMEDIO",
+    "IsComplete": false,
+    "Questions": [
+      {
+        "Id": 1,
+        "GoodResponse": false,
+        "Description": "Un ejemplo en el que contribuye el aprendizaje de la educación financiera es:",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "La promoción de la estafa.",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "El bienestar familiar.",
+            "IsCorrect": true,
+            "XP": 50
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "El sentido del humor.",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      },
+      {
+        "Id": 2,
+        "GoodResponse": false,
+        "Description": "¿Qué son los gastos hormiga?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Pequeños consumos diarios.",
+            "IsCorrect": true,
+            "XP": 70
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Compra de carros de colección.",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Pequeñas réplicas de hormigas.",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      },
+      {
+        "Id": 3,
+        "GoodResponse": false,
+        "Description": "¿Cuáles son algunos ejemplos de gastos hormiga?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Gustos de la cafetería, compra diaria de botellas o confites. ",
+            "IsCorrect": true,
+            "XP": 126
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Necesidad de gastos grandes, como la construcción o compra de un hogar.",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Compra de regalos para navidad y demás celebraciones.",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      },
+      {
+        "Id": 4,
+        "GoodResponse": false,
+        "Description": "¿Qué representan estos gastos acumulados durante largos periodos de tiempo?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Satisfacción. ",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Malos hábitos de consumo. ",
+            "IsCorrect": true,
+            "XP": 163
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Una adicción sin cura.",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      },
+      {
+        "Id": 5,
+        "GoodResponse": false,
+        "Description": "¿Cómo darse cuenta de cuáles son mis gastos hormiga?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Realizar un registro diario de gastos.",
+            "IsCorrect": true,
+            "XP": 210
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "En los fines de semana, intentar recordar todos mis gastos. ",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Buscando en internet.",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": 3,
+    "Name": "EXAMEN AVANZADO",
+    "IsComplete": false,
+    "Questions": [
+      {
+        "Id": 1,
+        "GoodResponse": false,
+        "Description": "Qué es un presupuesto?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Lista donde se anotan los ingresos que se reciben y se restan los gastos",
+            "IsCorrect": true,
+            "XP": 245
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Lista para iniciar a ahorrar ",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Lista para aprender técnicas de ahorro",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      },
+      {
+        "Id": 2,
+        "GoodResponse": false,
+        "Description": "Para qué sirve el presupuesto?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Para saber cuánto dinero entra, cuanto dinero sale y cuanto dinero queda ",
+            "IsCorrect": true,
+            "XP": 260
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Para saber cuando gastar el dinero",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Para saber cuando ahorrar",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      },
+      {
+        "Id": 3,
+        "GoodResponse": false,
+        "Description": "¿Para qué utilizan las familias los presupuestos?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Para poner en orden todos sus gastos",
+            "IsCorrect": true,
+            "XP": 186
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Para aprender a ahorrar",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Para saber cuánto dinero se ahorró",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      },
+      {
+        "Id": 4,
+        "GoodResponse": false,
+        "Description": "¿Qué significa la luz roja del semáforo?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Sobra dinero",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Hace falta dinero",
+            "IsCorrect": true,
+            "XP": 218
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Hay dinero ahorrado",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      },
+      {
+        "Id": 5,
+        "GoodResponse": false,
+        "Description": "¿Qué significa la luz amarilla del semáforo?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "El dinero alcanza para pagar los gastos",
+            "IsCorrect": true,
+            "XP": 210
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "El dinero no alcanza",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "El dinero sobra",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": 4,
+    "Name": "EXAMEN AVANZADO II",
+    "IsComplete": false,
+    "Questions": [
+      {
+        "Id": 1,
+        "GoodResponse": false,
+        "Description": "Qué significa la luz verde del semáforo?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Sobra dinero",
+            "IsCorrect": true,
+            "XP": 190
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Falta dinero para pagar los gatos",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Hay que ahorrar más ",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      },
+      {
+        "Id": 2,
+        "GoodResponse": false,
+        "Description": "Que debe hacer la familia si el dinero no alcanza?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Diferenciar los gastos necesarios de los no necesarios",
+            "IsCorrect": true,
+            "XP": 222
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Comprar las cosas no necesarias primero",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Comprar las cosas necesarios y también las no necesarias",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      },
+      {
+        "Id": 3,
+        "GoodResponse": false,
+        "Description": "Qué se puede hacer para ayudar a la familia a disminuir gastos?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Ahorrar",
+            "IsCorrect": true,
+            "XP": 230
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Ver televisión",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Dejar la luz encendida de noche",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      },
+      {
+        "Id": 4,
+        "GoodResponse": false,
+        "Description": "¿Qué es el kakebo?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Lista con técnicas para ahorrar",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Libro con dibujos para anotar los ingresos y los gastos",
+            "IsCorrect": true,
+            "XP": 273
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Archivo para registrar los ahorros",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      },
+      {
+        "Id": 5,
+        "GoodResponse": false,
+        "Description": "¿Para qué es utilizado el libro de kakebo?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Para ahorrar",
+            "IsCorrect": true,
+            "XP": 254
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Para dibujar",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Para pintar",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      }
+    ]
+  }
+
+]
