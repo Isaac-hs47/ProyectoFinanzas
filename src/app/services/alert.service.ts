@@ -38,7 +38,7 @@ export class AlertService {
     Swal.fire({
       title: 'Felicitaciones!!!',
       text: _text,
-      imageUrl: `./assets/img/fireworks.png`,
+      imageUrl: `./assets/img/level_up.png`,
       imageWidth: 200,
       imageHeight: 200,
       imageAlt: 'Medal',
@@ -50,13 +50,25 @@ export class AlertService {
   BadResponse(_text: string): void
   {
     Swal.fire({
-      text: _text,
-      imageUrl: `./assets/img/bad_response.png`,
+      title: _text,
+      imageUrl: `./assets/img/bad_answer.gif`,
       imageWidth: 200,
       imageHeight: 200,
-      imageAlt: 'Risa',
+      imageAlt: 'bad',
       showConfirmButton: false,
-      timer: 750
+      timer: 1000
+    });
+  }
+
+  GoodResponse(_text: string): void{
+    Swal.fire({
+      title: _text,
+      imageUrl: `./assets/img/good_answer.gif`,
+      imageWidth: 200,
+      imageHeight: 200,
+      imageAlt: 'good',
+      showConfirmButton: false,
+      timer: 1000
     });
   }
 

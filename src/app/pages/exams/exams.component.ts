@@ -1,7 +1,7 @@
 import { formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { StorageVariables } from 'src/app/enum/enums';
+import { ExamLevels, StorageVariables } from 'src/app/enum/enums';
 import { Exam } from 'src/app/interfaces/exam';
 import { TestComplete, User } from 'src/app/interfaces/user';
 import { CommonService } from 'src/app/services/common.service';
@@ -17,6 +17,8 @@ export class ExamsComponent implements OnInit {
   exams!: Exam[];
   currUser!: User;
   userCompletedExams!: TestComplete[];
+  baseUrl: string = "../../../assets/img/";
+
   constructor(private dialog: MatDialog, private localStorage: LocalstorageService, private commonService: CommonService) { }
 
   ngOnInit(): void {
@@ -44,6 +46,22 @@ export class ExamsComponent implements OnInit {
     })
 
     return totalXP;
+  }
+
+  GetExamImg(type: ExamLevels): string
+  {
+
+    switch(type)
+    {
+      case ExamLevels.BASIC:
+        return `${this.baseUrl}basic_exam.png`;
+      case ExamLevels.INTERMEDIATE:
+        return `${this.baseUrl}intermediate_exam.png`;
+        case ExamLevels.ADVANCE:
+          return `${this.baseUrl}advance_exam.png`;
+        default:
+          return `${this.baseUrl}logo_exams.jpeg`;
+    }
   }
 
   OpenExamModal(examId: number): void {

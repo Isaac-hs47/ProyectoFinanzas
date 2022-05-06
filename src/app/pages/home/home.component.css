@@ -1,0 +1,18 @@
+.bee-container{
+  height: 100%;
+}
+
+
+.beeImg{
+  width: 65px;
+  height: 65px;
+
+  transform: translate(47vw, 70vh);
+
+}
+
+.welcome{
+  font-size: 3rem;
+  color: white;
+}
+

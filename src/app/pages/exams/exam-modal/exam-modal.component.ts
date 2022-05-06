@@ -51,6 +51,8 @@ export class ExamModalComponent implements OnInit {
     {
       this.userService.GiveBadge(this.currentUser, BadgesCodes.FIRST_HIT);
 
+      this.alertService.GoodResponse("Muy bien!!!");
+
       question.GoodResponse = true;
 
       this.currentUser.Level.CurrentXP += answer.XP;
@@ -82,7 +84,7 @@ export class ExamModalComponent implements OnInit {
     }
     else
     {
-      this.alertService.BadResponse("JAJAJA");
+      this.alertService.BadResponse("Incorrecto!!");
     }
 
 

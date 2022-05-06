@@ -6,7 +6,9 @@
       <mat-card-title>{{exam.Name}}</mat-card-title>
     <mat-card-subtitle>Experiencia por completarlo: {{GetExamTotalExperience(exam.Id)}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="./assets/img/logo_exams.jpeg" alt="Photo of a Shiba Inu">
+  <div class="exam-img">
+    <img mat-card-image [src]="GetExamImg(exam.Type)" alt="Photo of a Shiba Inu">
+  </div>
   <mat-card-content class="flex-column">
     <span  *ngIf="!ExamIsComplete(exam.Id)">Este examen tiene {{exam.Questions.length}} preguntas</span>
     <span  *ngIf="ExamIsComplete(exam.Id)">Respondiste bien {{ GetGoodAnsweredQuesitons(exam.Id) }}  de {{exam.Questions.length}} preguntas</span>

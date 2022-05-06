@@ -14,6 +14,9 @@ import { UserService } from 'src/app/services/user.service';
 export class HomeComponent implements OnInit {
 
   currentUser!: User;
+  xpos: number = 0;
+  ypos: number = 0;
+  bee!: HTMLElement | null;
   constructor(private localStorageService: LocalstorageService,
               private alertService: AlertService,
               private userService: UserService) { }
@@ -22,6 +25,8 @@ export class HomeComponent implements OnInit {
     this.currentUser= this.localStorageService.GetStorageVariable<User>(StorageVariables.SESSION, {} as User);
 
     this.GiveBeginnerBadge();
+
+    document.getElementById("bee")?.addEventListener("mouseenter", this.ChagePosition)
   }
 
   GiveBeginnerBadge(): void{
@@ -44,5 +49,14 @@ export class HomeComponent implements OnInit {
       }
     }
   }
+
+  ChagePosition(): void{
+    document.addEventListener("mousemove", (e) => {
+      console.log(e)
+      document.getElementById("bee")?.style.setProperty("transform", `translate(${e.x}px, ${e.y}px)`);
+    });
+  }
+
+
 
 }

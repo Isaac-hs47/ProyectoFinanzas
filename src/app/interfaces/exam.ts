@@ -1,6 +1,8 @@
+
 export interface Exam {
   Id: number;
   IsComplete: boolean;
+  Type: number;
   Name: string;
   Questions: Question[];
 }

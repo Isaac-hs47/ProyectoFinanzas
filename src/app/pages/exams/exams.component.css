@@ -14,7 +14,9 @@
   background-color: transparent;
 
 }
-
+.exam-img{
+  padding: 35px;
+}
 .page-bg{
   background-image: url("../../../assets/img/finanzas_fondo2.jpg");
   background-repeat: repeat;

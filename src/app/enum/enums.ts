@@ -17,3 +17,9 @@ export enum StorageVariables{
     USERS = "Users",
     SESSION = "Session"
 }
+
+export enum ExamLevels{
+  BASIC,
+  INTERMEDIATE,
+  ADVANCE
+}

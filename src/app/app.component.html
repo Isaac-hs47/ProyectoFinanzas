@@ -17,8 +17,8 @@
         </mat-selection-list>
     </mat-drawer>
     <div class="header" *ngIf="ShowMenu()">
-        <button mat-button (click)="drawer.toggle()">
-            <mat-icon>menu</mat-icon>
+        <button mat-button (click)="onOpenMenuClick(drawer)" class="img-menu-cont">
+            <img [src]="imgButton" alt="img" class="img-menu">
         </button>
     </div>
     <div class="main-content">
