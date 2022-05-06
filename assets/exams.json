@@ -2,6 +2,7 @@
   {
     "Id": 1,
     "Name": "EXAMEN BASICO",
+    "Type": 0,
     "IsComplete": false,
     "Questions": [
       {
@@ -149,6 +150,7 @@
   {
     "Id": 2,
     "Name": "EXAMEN INTERMEDIO",
+    "Type": 1,
     "IsComplete": false,
     "Questions": [
       {
@@ -296,6 +298,7 @@
   {
     "Id": 3,
     "Name": "EXAMEN AVANZADO",
+    "Type": 2,
     "IsComplete": false,
     "Questions": [
       {
@@ -443,6 +446,7 @@
   {
     "Id": 4,
     "Name": "EXAMEN AVANZADO II",
+    "Type": 2,
     "IsComplete": false,
     "Questions": [
       {
@@ -586,6 +590,181 @@
         ]
       }
     ]
+  },
+  {
+    "Id": 5,
+    "Name": "EXAMEN INTERMEDIO II",
+    "Type": 1,
+    "IsComplete": false,
+    "Questions": [
+      {
+        "Id": 1,
+        "GoodResponse": false,
+        "Description": "¿Que nos dice la regla 50-30-20?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Que el 50% es para los gastos fijos y el 30% a los gastos variables y el 20 al ahorro",
+            "IsCorrect": true,
+            "XP": 130
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Que el 30% es para los gastos fijos y el 50% a los gastos variables y el 20 al ahorro",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Que el 80% es para los gastos fijos y el 30% a los gastos variables y el 20 al ahorro",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      },
+      {
+        "Id": 2,
+        "GoodResponse": false,
+        "Description": "¿Por que no funciona la regla 50-30-20?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Por qué comenzamos de izquierda a derecha en orden",
+            "IsCorrect": true,
+            "XP": 167
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Por que comenzamos de derecha a izquierda en el orden.",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Por que comenzamos de media a izquierda en el orden",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      },
+      {
+        "Id": 3,
+        "GoodResponse": false,
+        "Description": "¿Como sirven la regla de 50-30-20?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Si comenzamos de derecha a izquierda en el orden",
+            "IsCorrect": true,
+            "XP": 190
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Si comenzamos de izquierda a izquierda en el orden",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Si comenzamos de derecha en el orden",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      },
+      {
+        "Id": 4,
+        "GoodResponse": false,
+        "Description": "¿Por que se ocupa un fondo de emergencia?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Para gastar cuál quier cosa sea fiestas, vendidas",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Para cubrir cuál quier emergencia sea carro o en casa",
+            "IsCorrect": true,
+            "XP": 140
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Para jugar e juegos de azar y gastar más en comida.",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      },
+      {
+        "Id": 5,
+        "GoodResponse": false,
+        "Description": "¿Que es el fondo de emergencia?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "Es un ahora que hacemos para beber todos los meses.",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "Es un ahora que se hace por cualquier emergencia",
+            "IsCorrect": true,
+            "XP": 169
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "Es el dinero que guardamos en el banco.",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      },
+      {
+        "Id": 6,
+        "GoodResponse": false,
+        "Description": "¿Cuanto es el porcentaje más recomendado para los ahorros de emergencia?",
+        "Answers": [
+          {
+            "Id": 1,
+            "IsSelected": false,
+            "Description": "8 meses/12 meses",
+            "IsCorrect": true,
+            "XP": 200
+          },
+          {
+            "Id": 2,
+            "IsSelected": false,
+            "Description": "12 meses",
+            "IsCorrect": false,
+            "XP": 0
+          },
+          {
+            "Id": 3,
+            "IsSelected": false,
+            "Description": "5 meses/12 meses",
+            "IsCorrect": false,
+            "XP": 0
+          }
+        ]
+      }
+    ]
   }
-
 ]
