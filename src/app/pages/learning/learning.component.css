@@ -12,15 +12,3 @@
 
 }
 
-
-.page-bg{
-  background-image: url("../../../assets/img/finanzas_fondo2.jpg");
-  background-repeat: repeat;
-  opacity: 0.6;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1000;
-  width: 100vw;
-  height: 100vh;
-}

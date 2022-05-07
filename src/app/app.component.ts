@@ -48,6 +48,7 @@ export class AppComponent implements OnInit {
     }
   }
 
+
   ShowMenu(): boolean{
     switch (this.router.url) {
       case '/':
@@ -57,6 +58,20 @@ export class AppComponent implements OnInit {
 
       default:
         return true;
+    }
+  }
+
+  showBg(): string
+  {
+    switch (this.router.url) {
+      case '/':
+      case '/login':
+      case '/register':
+        return "";
+      case '/home':
+        return "bg-img-park";
+      default:
+        return "bg-money";
     }
   }
 }
